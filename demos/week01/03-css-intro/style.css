@@ -1,0 +1,60 @@
+/* This is were we'll write the css for our website */
+
+/* CSS works via 'selectors' */
+
+/* The first one is the element selector! */
+
+body {
+    background-color: tomato;
+    font-family: monospace;
+}
+
+li {
+    color: white;
+}
+
+/* The class selector */
+
+/* to use this, give you element (your html tag) a class attribute */
+
+.cool-text {
+    font-family: fantasy;
+    font-size: 32px;
+    color: cornflowerblue;
+}
+
+/* select multiple tags at once */
+
+a, h1 {
+    color: purple;
+    font-family: monospace;
+}
+
+/* lets slect only a tags that are children of nav */
+
+.nav > a {
+    background-color: azure;
+}
+
+
+/* pseudo selectors! these are to do with states */
+
+.cool-text:hover {
+    color: red;
+}
+
+.cta-button {
+    height: 80px;
+    width: 80px;
+    color: white;
+    background-color: darkblue;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+
+/* ID selector */
+
+#footer {
+    background-color: black;
+}
