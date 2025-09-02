@@ -1,0 +1,96 @@
+.box {
+    height: 150px;
+    width: 150px;
+    background-color: grey;
+    font-family: monospace;
+    font-size: 26px;
+}
+
+/* by default, all elements have a position: property of 'static */
+
+.static {
+    position: static;
+}
+
+/* Normal Document Flow -> a fancy way to describe how our html is laid out after being interprited by the browser */
+
+/* When we set position:absolute on something - it is removed from the 'normal document flow' */
+
+.absolute {
+    position: absolute;
+
+    /* now that i've set position abosulte on something, I also have acess to other proterties */
+
+    top: 0px; 
+    left: 300px;
+}
+
+
+/* isn't removed from the document flow */
+.relative {
+    position: relative;
+    left: 5px;
+}
+
+
+.sticky {
+    position: sticky;
+    /* we can give it a top property to tell it when to start sticking to the viewport */
+    top: 30px;
+}
+
+/* fixed is stuck in place at whatever coordinates you give it. scroll with the viewport */
+.fixed {
+    position: fixed;
+}
+
+
+
+
+.parent {
+    position: relative;
+    top: 30px;
+    left: 20px;
+    height: 400px;
+    width: 400px;
+}
+
+/* any element with position absolute will position itself according to the whole document or any parent that isn't *static* */
+.child {
+    background-color: tomato;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+.tree {
+    background-image: url('https://images.unsplash.com/photo-1482148454461-aaedae4b30bb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+}
+
+.america {
+    background-image: url('https://images.unsplash.com/photo-1498855926480-d98e83099315?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+}
+
+.beach {
+    background-image: url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=2788&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+}
+
+.snow {
+    background-image: url('https://images.unsplash.com/photo-1418985991508-e47386d96a71?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+}
+
+.flower {
+    background-image: url('https://images.unsplash.com/photo-1618468355232-88a329df0182?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+}
