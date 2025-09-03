@@ -1,0 +1,22 @@
+
+.box {height: 100px; width: 100px;}
+.one {background-color: #A4243B;}
+.two {background-color: #d8c99b;}
+.three{background-color: #D8973C;}
+.four{background-color: #BD632F;}
+.five{background-color: #273E47;}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: bisque;
+    height: 300px;
+    gap: 10px;
+
+    position: sticky;
+    top: 10px;
+}
