@@ -52,9 +52,9 @@ console.log(tagline)
 
 
 // strings
-'single quotes is fine'
-"i'll double quotes is also fine"
+// 'single quotes is fine'
+// "i'll double quotes is also fine"
 // you can use aother quote marks as you like
-`backtick's are also "fine"`
+// `backtick's are also "fine"`
 
-"```````````````````"
+// "```````````````````"

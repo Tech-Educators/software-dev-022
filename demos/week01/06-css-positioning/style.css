@@ -42,6 +42,7 @@
 /* fixed is stuck in place at whatever coordinates you give it. scroll with the viewport */
 .fixed {
     position: fixed;
+    z-index: 1;
 }
 
 
