@@ -1,0 +1,35 @@
+
+body {
+    margin: 0px;
+}
+
+
+.feature {
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+
+/* we always put the path in quotes */
+/* put ./ - from where this file is, go into the images folder  */
+
+.forest {
+    background-image: url('./images/forest.jpg');
+}
+
+.beach {
+    background-image: url('https://images.unsplash.com/photo-1473116763249-2faaef81ccda?q=80&w=2392&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+img {
+    height: 200px;
+    width: auto;
+}
+
+.cta-box {
+    position: absolute;
+    bottom: 225px;
+    left: 125px;
+    color: white;
+}
