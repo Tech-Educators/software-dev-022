@@ -44,3 +44,4 @@ colours.length // 3
 // how can I always get the last element of the array? Array is any size. 
 
 colours[colours.length - 1] // Crimson
+
