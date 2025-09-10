@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: tomato;
+    font-family: monospace;
+    color: white;
+
+    display: grid;
+
+    /* set the amount of columns */
+    /* fr - fraction */
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr 1fr;
+
+    gap: 20px;
+}
+
+/* how do we move the elements? */
+
+header {
+    background-color: beige;
+    width: 100%;
+
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+main {
+    background-color: blue;
+    grid-row: 2 / 4;
+    /* instead of doing this
+    grid-row-start: 2;
+    grid-row-end: 4;
+    */
+    grid-column-start: 2;
+
+    /* we can nest grids */
+    /* display: grid; */
+}
+
+footer {
+    grid-row: 4 / 4;
+    grid-column-start: 2;
+}
