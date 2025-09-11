@@ -1,0 +1,55 @@
+
+* {
+    box-sizing: content-box;
+    margin: 0px;
+}
+
+html {
+    font-size: 2px;
+}
+
+body {
+    background-color: aliceblue;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+p {
+    /* so in the html selctor the font-size is 2px - 3rem will be 6 pixels. We can reuse rem throughout hte website, and if we need to scale fonts for mobile or desktop we just need need to change the root elements font size. */
+    font-size: 3rem;
+}
+
+.box {
+    height: 500px;
+    width: 500px;
+    background-color: aquamarine;
+}
+
+/* screen is above 400px and below 900px */
+/* are we above mobile sizing */
+/* do styling *for* mobile first by default and query for above mobile screen sizes */
+@media (min-width: 400px) and (max-width: 1200px){
+   body {
+    background-color: coral;
+   } 
+
+}
+
+
+/* there are also ultrawide screens*/
+
+
+/* EM is a unit in CSS - it comes from ye olde printing press, where the character 'm' was used to standardise letter sizing. */
+
+/* 1EM is 16px */
+
+/* REM - Relative EM */
+
