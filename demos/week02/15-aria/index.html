@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. Just use semantic elements  -->
+
+    <!-- We can use aria-label to add extra context to elements if needed -->
+    <a href="http://google.com" aria-label="Go to the google.com search page">Search</a>
+
+
+
+    <!-- use tabindex=0 to make things tabable -->
+     <!-- never set it to anyhtign except for 0 -->
+      <!-- even multiple element all = 0 -->
+    <img src="https://www.zooborns.com/.a/6a010535647bf3970b02c1a6cf3a83200b-800wi" alt="" tabindex="0">
+    <!-- we'll use aria-live to tell aria to watch for changed to the content of the div. When those changes happen, it will re-read the content -->
+    <!-- setting it to assertive means it will interupt itself when the change happens -->
+    <!-- setting it to polite will mean it finishes whatever it was saying before reading out the notification -->
+    <div id="notification-area" aria-live="assertive">No new notifications</div>
+    <button id="notificationButton">Generate Notification</button>
+
+    <!-- make sure that screen readers do not readout this element -->
+    <div aria-hidden="true">Just for decoration</div>
+</body>
+</html>
