@@ -1,0 +1,11 @@
+.thumbnails {
+    height: 10vh;
+    width: 100vw;
+    overflow: scroll;
+}
+
+/* I only want htis to affect images that are a child of the .thumbnails class */
+.thumbnails > img {
+    height: 9vh;
+    width: auto;
+}
