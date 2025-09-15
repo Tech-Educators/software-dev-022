@@ -31,3 +31,12 @@ myMarquee.innerText = `You cant stop me making maruqeeeeee!'s`
 document.body.appendChild(myMarquee)
 
 // document.getElementById('div').appendChild(myMarquee)
+
+
+const header = document.querySelectorAll('h1')
+
+
+for (head of header) {
+    console.log(head)
+    head.remove()
+}

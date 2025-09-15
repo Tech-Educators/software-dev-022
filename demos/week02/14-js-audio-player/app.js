@@ -38,18 +38,19 @@ skipBack.addEventListener('click', function() {
 
 
 let holdingButton = false
+let interval;
 
 scrubForward.addEventListener('mousedown', function(event) {
     // while the mouse is being held 
-    console.log(event)
     holdingButton = true
     // when we press the button lets add 10 seconds to the current every second 
 
     // i'll use a function called setInterval
     // a funciton
     // time (in milisecionds)
-    const interval = setInterval(function() {
+    interval = setInterval(function() {
         if (holdingButton == false) {
+            clearInterval(interval)
             return;
         }
         audio.currentTime += 10
@@ -60,7 +61,20 @@ scrubForward.addEventListener('mousedown', function(event) {
     }
 })
 
-scrubForward.addEventListener('mouseup', function(event) {
+scrubForward.addEventListener('mouseup', function() {
     holdingButton = false;
+    clearInterval(interval)
     console.log('stopped holding butotn')
 })
+
+scrubForward.addEventListener('mouseleave', () => {
+    holdingButton = false;
+    clearInterval(interval)
+})
+
+
+function handleClick() {
+    audio.play()
+}
+
+audio.addEventListener('click', handleClick)

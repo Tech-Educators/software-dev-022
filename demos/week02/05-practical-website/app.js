@@ -37,3 +37,16 @@ button.addEventListener('click', handleClick)
 function handleClick() {
     // some interesting code
 }
+
+
+button.addEventListener('click', function() {})
+
+
+function sumAndRunARandomFunction(a, b, aFunction) {
+    aFunction()
+    return a + b
+}
+
+sumAndRunARandomFunction(10, 4, function() {
+    console.log('Hello world!')
+})

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- src set -->
+     <img src="" alt="" srcset="
+        ./assets/400x400.jpg 400w,
+        ./assets/600x600.jpg 600w,
+        ./assets/800x800.jpg 800w,
+        ./assets/1000x1000.jpg 1000w,
+        ./assets/2000x2000.jpg 2000w
+     ">
+
+
+     <!-- we can use sizes to tell the browser how big the image will be visualy at a certain screen size. -->
+     <img src="" srcset="
+     ./assets/sizes/small.jpg 640w,
+     ./assets/sizes/large.jpg 2400w,
+     ./assets/sizes/medium.jpg 1920w
+     "
+
+     
+     sizes="
+        (min-width: 2000px) 50vw,
+        100vw
+     "
+     />
+
+     <!-- when the viewport (screen is over 2000px, the image will be 50vw, otherwise it will be 100vw) -->
+</body>
+</html>

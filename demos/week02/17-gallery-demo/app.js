@@ -22,7 +22,7 @@ const images = [
 function createThumbnails() {
     // I am going to loopp through all of my images array and for eahc image create an image tag and set it's content to be the information in the image object
 
-    images.forEach(function(image) {
+    images.forEach(function(image, index) {
         // image is the image object (from above)
         let imageElement = document.createElement('img')
         console.log(`current image is`, image)
