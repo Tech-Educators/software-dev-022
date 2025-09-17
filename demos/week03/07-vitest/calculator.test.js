@@ -1,4 +1,4 @@
-import { sum, multiply } from "./calculator.js"
+import { sum, multiply, findMaxValue } from "./calculator.js"
 import { test, expect, describe} from "vitest"
 
 // test takes two argumetns
@@ -9,6 +9,9 @@ test('test if sum works', () => {
     expect(sum(1,2)).toBe(3)
 })
 
+test('max value of array', () => {
+    expect(findMaxValue([3, 7, 2, 8, 5])).toBe(8)
+})
 // in your package.json, you can run the commands in your script tags by writing 'npm run scriptname' in your terminal. 
 // For example, `npm run test`
 
