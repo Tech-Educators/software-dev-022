@@ -1,4 +1,5 @@
 import cowsay from "cowsay"
+import chalk from "chalk"
 // to get the above method to work, make sure to include "type": "module" in your package.json file.
 
 

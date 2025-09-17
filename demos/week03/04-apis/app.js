@@ -7,7 +7,7 @@ async function fetchData() {
     // fetch means - make a request to this url 
     // await is the part that says 'come back to this later'
     // this first part only starts the request - to get something called 'headers'.
-    const response = await fetch(`https://randomfox.ca/floof/`)
+    const response = await fetch(`https://api.github.com/repos/facebook/react`)
 
     // get the actual data
     // read the stream given to us. 
