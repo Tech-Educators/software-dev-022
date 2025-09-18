@@ -22,3 +22,9 @@ button.addEventListener('click', function() {
 })
 
 // console.log(localStorage.getItem('count'))
+
+
+localStorage.setItem('name', 'Sam')
+
+const sam = localStorage.getItem('name')
+console.log(sam)
