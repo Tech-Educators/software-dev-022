@@ -1,0 +1,13 @@
+.bee-container {
+    height: 50vh;
+    width: 50vw;
+
+    border: 5px rgb(233, 186, 18) solid;
+    margin: 10px;
+}
+
+.bee-container > img {
+    object-fit: contain;
+    width: 50vh;
+    height: auto;
+}
