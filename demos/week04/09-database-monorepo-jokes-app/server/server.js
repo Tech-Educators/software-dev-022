@@ -33,17 +33,6 @@ app.get('/jokes', async (req, res) => {
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
 // I'll make a post route to allow people to make new jokes
 app.post('/jokes', async (req, res) => {
     // When the client sends up infromation it is always in the request.body
