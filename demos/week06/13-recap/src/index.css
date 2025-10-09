@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+@theme {
+    --color-opal-green: #015D52
+}
+
+
+.normal-class {
+    display: flex;
+}
