@@ -1,6 +1,6 @@
-import Header from "./components/Header"
+import Header from "./components/Header.jsx"
 import { OtterContainer } from "./components/OtterContainer"
-import { Hello } from "./components/OtterContainer"
+
 
  function App() {
   return (
