@@ -1,4 +1,4 @@
-import { useParams } from "react-router"
+import { useParams, Outlet} from "react-router"
 import { findPlant } from "../plantInfo"
 
 export default function IndividualPlant() {
@@ -10,6 +10,7 @@ export default function IndividualPlant() {
     console.log(plantInfo)
     return (
         <div>
+            {/* placeholder for the element to render when the user goes to /photos or /edit. If they go to just /plants/1, they wont see the outlet at all. */}
             {plantInfo ? (
                 <div>
                     <p>{plantInfo.name}</p>

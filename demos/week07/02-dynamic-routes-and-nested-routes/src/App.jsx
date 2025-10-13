@@ -15,7 +15,13 @@ export default function App() {
           {/* this matches to /plants/1 or plants/3 so on */}
           {/* plants/4 id=4*/}
           {/* plants/sam  id=sam*/}
-          <Route path="/plants/:id" element={<IndividualPlant />} />
+          <Route path="/plants/:id" element={<IndividualPlant />} >
+            {/* /plants/2/photos */}
+            <Route path='/plants/:id/photos' element={<p>Some more photos</p>}>
+            </Route>
+            {/* plants/2/edit */}
+            <Route path="/plants/:id/edit" element={<p>an edit modal</p>}></Route>
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
