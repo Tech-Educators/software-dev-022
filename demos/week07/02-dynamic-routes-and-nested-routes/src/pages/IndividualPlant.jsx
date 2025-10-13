@@ -11,6 +11,7 @@ export default function IndividualPlant() {
     return (
         <div>
             {/* placeholder for the element to render when the user goes to /photos or /edit. If they go to just /plants/1, they wont see the outlet at all. */}
+            <Outlet />
             {plantInfo ? (
                 <div>
                     <p>{plantInfo.name}</p>
