@@ -1,6 +1,7 @@
 import { useState } from "react"
 export default function SimpleForm() {
     const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -18,6 +19,9 @@ export default function SimpleForm() {
                     console.log(event.target.value)
                     setUsername(event.target.value)
                 }}/>
+                <input onChange={(e) => {
+                    setPassword(e.target.value)
+                }} />
                 <button type="submit">Submit</button>
             </form>
         </div>
