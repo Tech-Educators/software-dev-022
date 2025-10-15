@@ -24,3 +24,34 @@ export const CookieClicker = () => {
         </div>
     )
 }
+
+
+// useEffect(function () {
+//     // setInterval() returns an ID for that interval so we know which one to work with
+//     const interval = setInterval(function ()  {
+//         console.log(`Interval running`) 
+//         // we force react to give us the last value of cookies and not just the static 0 from when the interval was made. 
+//         setCookies(function (prevCookies) {return prevCookies + 1})
+//     }, 1000)
+
+//     // I'm going to clear my interval to make sure it stops running before another one can be made
+//     return function() {
+//         // clear the interval we started earlier when the component unmounts. 
+//         clearInterval(interval)
+//     }
+// }, [])  
+
+
+
+// () => {return foo}
+// () => foo
+
+// Array.map(item => (
+//     <p>item</p>
+// ))
+
+// App.map(item => {
+//     return (
+//         <p>item</p>
+//     )
+// })
