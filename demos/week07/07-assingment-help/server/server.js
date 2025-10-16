@@ -18,12 +18,23 @@ const db = new pg.Pool({
 // create / endpoint just to test
 
 
-
+http://localhost:8080/posts
 // create end point that queries the database for 'posts' and returns them
-
+app.get('/posts', async (req, res) => {
+    const posts = (await db.query(`SELECT * FROM POSTS`)).rows
+    res.json(posts)
+})
 
 // create a POST endpoint that inserts new posts from the client into your database 
 
+// http://localhost:8080/posts/2
+// only the post with the id of 2
+app.get('/posts/:id', async (req, res) => {
+    // /posts/2
+    const id = req.params.id
+    const post = (await db.query(`SELECT * FROM posts WHERE id = $1`, [id])).rows[0]
+    res.json(post)
+})
 
 
 // app.listen()
