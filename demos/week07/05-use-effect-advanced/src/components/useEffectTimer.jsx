@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 
 export const CookieClicker = () => {
+    // console.log(`Component running`)
     const [cookies, setCookies] = useState(0)
 
     useEffect(() => {
+        console.log('Hello')
         // setInterval() returns an ID for that interval so we know which one to work with
         const interval = setInterval(() => {
             console.log(`Interval running`) 
@@ -14,6 +16,7 @@ export const CookieClicker = () => {
         // I'm going to clear my interval to make sure it stops running before another one can be made
         return () => {
             // clear the interval we started earlier when the component unmounts. 
+            console.log(`Clean up runs`)
             clearInterval(interval)
         }
     }, [])

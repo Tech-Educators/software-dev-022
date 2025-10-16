@@ -4,7 +4,8 @@
 create table messages (
     id INT PRIMARY KEY GENERATED ALWAYS AS IDENTETIY,
     author text,
-    message text
+    message text,
+    profile_picture text
 )
 
 INSERT INTO messages (author, message) VALUES ('Sam', 'It is cold!')
