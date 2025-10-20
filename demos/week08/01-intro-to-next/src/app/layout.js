@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 
 // sets up our fonts
@@ -26,6 +27,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header>
+          <nav>
+            <Link href={`/dogs`}>dogs</Link>
+            <Link href={`/about-us`}>About</Link>
+          </nav>
+        </header>
         <h2>THis renders on every single page!</h2>
         {/* children is a placeholder - whatever page.js should be renedered goes here (based on the route) */}
         {children}

@@ -8,3 +8,6 @@ export default function Home() {
     </div>
   );
 }
+
+// localhost:3000
+// localhost:3000/about-us 
