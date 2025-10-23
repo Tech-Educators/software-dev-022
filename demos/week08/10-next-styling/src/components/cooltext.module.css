@@ -1,0 +1,15 @@
+/* we must use classes, the file must end in .module.css */
+
+.text {
+    font-family: monospace;
+    color: tomato;
+    /* by defautl our root is 16px */
+    font-size: 1.5rem;
+}
+
+.box {
+    height: 100px;
+    width: 1000px;
+    background: #EEAECA;
+background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
