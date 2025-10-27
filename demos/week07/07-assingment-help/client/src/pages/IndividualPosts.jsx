@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
-import { useParams, useSearchParams } from "react-router";
+import { useParams } from "react-router";
 
 export default function IndividualPosts() {
   const [postInfo, setPostInfo] = useState({});
   const [formData, setFormData] = useState({})
   const params = useParams();
   const postId = params.id;
-
-
-    console.log(formData)
 
 
   useEffect(() => {
@@ -22,8 +19,10 @@ export default function IndividualPosts() {
 
   function handleSubmit(e) {
     e.preventDefault()
-    console.log(e.target.postId.value)
     setFormData({...formData, postId: e.target.postId.value})
+    // submit
+    console.log(formData)
+    setFormData('')
   }
 
   return (
@@ -40,7 +39,7 @@ export default function IndividualPosts() {
 
       <form onSubmit={handleSubmit}>
         <input name="postId" type="hidden" value={postId} />
-        <input name="comment" onChange={(e) => setFormData({comment: e.target.value})}/>
+        <input name="comment" value={formData.comment || ''} onChange={(e) => setFormData({comment: e.target.value})}/>
       </form>
     </div>
   );

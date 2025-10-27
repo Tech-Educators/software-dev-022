@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <div>
       {/* I run on the server */}
-      {/* <Server /> */}
+      <Server />
       {/* I run on the client */}
       <Client />
 
