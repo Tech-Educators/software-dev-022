@@ -14,12 +14,18 @@ export default async function BooksPage({params}) {
 
 
     // if booksDetails is undefined
+    // if (!bookDetails) {
+    //     notFound()
+    // }
     if (!bookDetails) {
-        notFound()
+        return (
+            <p>Couldn't find that book!</p>
+        )
     }
 
     return (
         <div>
+            
             <h3>{bookDetails.title}</h3>
             <p>{bookDetails.description}</p>
         </div>
