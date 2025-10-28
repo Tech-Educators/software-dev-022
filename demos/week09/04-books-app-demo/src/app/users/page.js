@@ -1,6 +1,7 @@
 import {auth} from "@clerk/nextjs/server"
 import { db } from "@/utils/connect"
 import UserSignUpForm from "@/components/UserSignUpForm"
+import Link from "next/link"
 
 export default async function UserPage() {
     const authInfo = await auth()
@@ -41,6 +42,9 @@ export default async function UserPage() {
             <h2>Your profile:</h2>
             <p className="text-2xl">{userInfo.username}</p>
             <p>{userInfo.bio}</p>
+
+            <br />
+            <Link href={`/users/edit`}>Edit your profile</Link>
         </div>
     )
 }
