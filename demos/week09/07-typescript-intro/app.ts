@@ -1,6 +1,7 @@
 // to install typestrip 
 // npm i typescript
 // convert to js with npx tsc app.ts
+// run file with node app.ts
 
 
 
