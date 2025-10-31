@@ -6,15 +6,18 @@ import { revalidatePath } from "next/cache";
 export default async function CreatePost() {
   const { userId } = await auth();
   //   If the foreign key is the SQL-generated id then we want to query the db to get that instead of the clerk id
-  const properId = await db.query("SELECT id FROM users WHERE clerk_id = $1", [
-    userId,
-  ]);
+  const properId = (
+    await db.query("SELECT id FROM users WHERE clerk_id = $1", [userId])
+  ).rows[0];
 
   async function handlePost(formData) {
     "use server";
     // Assuming we have just one column called title:
     const { title } = Object.fromEntries(formData);
-    await db.query("INSERT INTO posts (title) VALUES ($1)", [title]);
+    await db.query("INSERT INTO posts (user_id, title) VALUES ($1, $2)", [
+      properId,
+      title,
+    ]);
     revalidatePath("/");
     redirect("/");
   }
