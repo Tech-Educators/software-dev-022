@@ -4,6 +4,16 @@ import { auth } from "@clerk/nextjs/server";
 export default async function CreateProfile() {
   const { userId } = await auth();
 
+  const user = (
+    await db.query("SELECT * FROM users WHERE clerk_id = $1", [userId])
+  ).rows[0];
+
+  console.log(user);
+
+  if (user) {
+    return <p>Sorry! You already have a profile!</p>;
+  }
+
   async function handleSubmit(formData) {
     "use server";
     const { username, bio } = Object.fromEntries(formData);
